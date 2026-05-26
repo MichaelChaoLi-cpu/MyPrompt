@@ -117,3 +117,23 @@ prompts:
 
     有任何不懂都要问我。'
   created_at: '2026-05-26T17:02:50'
+- goal: '小调整，能不能吧同步键挪出来。
+
+    如果没有链接github就是灰色，且不能点，如果链接了就是绿色的。同步过后一旦data有更新这个键，就应该是红色'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: ''
+  created_at: '2026-05-26T17:12:02'
+- goal: '小调整，能不能吧同步键挪出来。
+
+    如果没有链接github就是灰色，且不能点，如果链接了就是绿色的。同步过后一旦data有更新这个键，就应该是红色'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要推测我的意图。
+
+    有任何不懂都要问我。'
+  created_at: '2026-05-26T17:12:22'
