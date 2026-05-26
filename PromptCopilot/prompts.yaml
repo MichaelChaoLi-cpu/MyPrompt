@@ -1,0 +1,85 @@
+prompts:
+- goal: '增加一个新的功能，
+
+    在右栏底部加一个，添加工作文件夹的选项。
+
+    这个地址应该是绝对地址，添加后，可以读取这个目录下的结构。
+
+    可以在右侧选择打开这个目录，打开后可以选择输入和输出。
+
+    然后每个条目后面可以勾选。
+
+    如果选择的是输入，勾选后，这个文件的相对地址就会按条列在输入。
+
+    输出也是一样，选了输出就列在输出。
+
+    输入输出还可以手动添加，新的条目。但是勾选的不得修改
+
+    绝对地址存在项目的config.yaml中'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要推测我的意图。
+
+    有任何不懂都要问我。'
+  created_at: '2026-05-26T15:19:14'
+- goal: 文件夹也可以勾选，不是只有文件
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要推测我的意图。
+
+    有任何不懂都要问我。'
+  created_at: '2026-05-26T15:29:46'
+- goal: 修改一下，输入输出可以为同一个文档。
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要推测我的意图。
+
+    有任何不懂都要问我。'
+  created_at: '2026-05-26T16:19:36'
+- goal: 更新Readme
+  inputs:
+  - README.md
+  outputs:
+  - README.md
+  steps: []
+  notes: ''
+  sticky_notes: '不要推测我的意图。
+
+    有任何不懂都要问我。'
+  created_at: '2026-05-26T16:26:28'
+- goal: 'Prompt 编辑，加一个功能，清空当前表单。
+
+    这个会清空prompt的全部内容，选择的文档也会清除。但是备注常驻内容不会清除。
+
+    这是为了下一个prompt书写'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要推测我的意图。
+
+    有任何不懂都要问我。'
+  created_at: '2026-05-26T16:30:13'
+- goal: '增加功能。
+
+    可以通过设置把引入一个git repo来控制data
+
+    点开设置，可以粘贴一个git repo，然后点击初始化，就在data里初始化。
+
+    最好是public的可以然后点击同步，就让本地与remote同步，如果本地跟远端没有冲突，就完成最新同步。
+
+    为了确保不冲突，如果设置了git，每次启动后选择项目或者创建项目都要检查。然后要求弹窗同步。这是强制的。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要推测我的意图。
+
+    有任何不懂都要问我。'
+  created_at: '2026-05-26T16:38:17'

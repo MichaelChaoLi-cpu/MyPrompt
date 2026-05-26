@@ -1,0 +1,11 @@
+prompts:
+- goal: 测试目标
+  inputs:
+  - 输入A
+  outputs:
+  - 输出A
+  steps:
+  - 步骤1
+  notes: 备注
+  sticky_notes: 常驻
+  created_at: '2026-05-26T15:12:42'
