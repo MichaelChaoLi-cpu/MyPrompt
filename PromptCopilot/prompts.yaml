@@ -94,3 +94,26 @@ prompts:
 
     有任何不懂都要问我。'
   created_at: '2026-05-26T16:48:41'
+- goal: '我们开始设置开箱即用。
+
+    满足的平台应该包括macOS，Linux，Windows。
+
+    你可以参考之前的项目'
+  inputs:
+  - ../Zhixiang
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要推测我的意图。
+
+    有任何不懂都要问我。'
+  created_at: '2026-05-26T16:57:44'
+- goal: 仿照Zhixiang项目增加点击自动更新功能。
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要推测我的意图。
+
+    有任何不懂都要问我。'
+  created_at: '2026-05-26T17:02:50'
