@@ -137,3 +137,14 @@ prompts:
 
     有任何不懂都要问我。'
   created_at: '2026-05-26T17:12:22'
+- goal: '修改REAMDE.
+
+    让它包括中英文。加一些badge'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要推测我的意图。
+
+    有任何不懂都要问我。'
+  created_at: '2026-05-26T17:19:13'
