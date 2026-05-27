@@ -1,0 +1,20 @@
+prompts:
+- goal: '修改ignore.
+
+    现在我们这样使用dvc。
+
+    所以我觉得这个ignore文档需要修改'
+  inputs:
+  - data/NepalLivingStandardardSurvey2022
+  - data/NepalLivingStandardardSurvey2022.dvc
+  - data/.gitignore
+  - .gitignore
+  outputs:
+  - .gitignore
+  - data/.gitignore
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-27T09:24:03'
