@@ -1,0 +1,65 @@
+prompts:
+- goal: 现在帮我写ai_elec_tfidf.py
+  inputs:
+  - docs/ESG07b-plan.md
+  outputs:
+  - src
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-26T20:26:28'
+- goal: '要把这个代码改了，输出每天所有的新闻的relatedness计算。
+
+    我们要计算十个同义词或者近义词：
+
+    * AI electricity
+
+    * AI power demand
+
+    * AI energy demand
+
+    * AI energy consumption
+
+    * AI electricity consumption
+
+    * AI-driven electricity use
+
+    * AI power consumption
+
+    * Artificial intelligence energy use
+
+    * AI data center electricity demand
+
+    * AI computational energy demand
+
+    然后计算十个话题relatedness，十个话题都超过0.5才应该被认为是关于AI electricity的新闻。
+
+
+    这个原始分数应该都保留。'
+  inputs:
+  - src/preprocessing/ai_elec_scoring.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-26T21:11:16'
+- goal: '修改src/preprocessing/ai_elec_tfidf.py
+
+    选最常见的五百个。
+
+    要对比两个cluster，一个是相关的一个是无关的。
+
+    但是我这里没想好。因为这两个数量不想等。你觉得应该怎么办呢。'
+  inputs:
+  - src/preprocessing/ai_elec_tfidf.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-26T21:20:49'
