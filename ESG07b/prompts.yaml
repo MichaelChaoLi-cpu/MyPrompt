@@ -111,3 +111,48 @@ prompts:
 
     有任何不懂都要问我'
   created_at: '2026-05-27T12:16:17'
+- goal: '我们接下来要加一组分析，测试data/processed/energy_coemerging.md中两两组合的共生性。
+
+    这个要统计rel数字。
+
+    然后用小写，进行统计。
+
+    输出结果的方法是，第一列词一，第二列词二，第三列共生比例真/全集'
+  inputs:
+  - data/processed/energy_coemerging.md
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-27T21:05:21'
+- goal: '接下来要进行图表绘制了。我们需要一些结果。
+
+    你可以读src/preprocessing代码
+
+    绘制计算结果的代码可以写在src/analyses
+
+    图表存在docs/results。
+
+    每一个图表都有单独的代码生成方便审阅。
+
+    在启动之前，在docs中加一个result_plan.md'
+  inputs:
+  - src/preprocessing
+  outputs:
+  - src/analysee
+  - docs/result_plan.md
+  steps:
+  - 确认文件结构，和内容情况
+  - 设计result_plan.md
+  - 设计代码准备执行
+  notes: '注意，由于新闻数量前后是有差距的。因此统计rel新闻数随着时间变化，不要用绝对数量。
+
+    另外，rel的变化可以平均relatedness的均值的变化。
+
+    如果日变化难以可视话，你可以采用周或者月变化'
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-27T21:20:27'
