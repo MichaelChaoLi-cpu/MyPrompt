@@ -63,3 +63,51 @@ prompts:
 
     有任何不懂都要问我'
   created_at: '2026-05-26T21:20:49'
+- goal: '我现在要询问，这些词出现于多少articles？
+
+    有些话题可能太悉数了。
+
+    我想要求必须出现于500个文章。
+
+    不论是rel还是irrel。
+
+    n应该为1-4.因为可能是股票代码
+
+    还有一个点。
+
+    Fitting TfidfVectorizer on 16,807,735 articles …
+
+    Vocabulary size: 50,000  |  matrix: (16807735, 50000)
+
+
+    这一步是不是可以多核并行。
+
+    然后字典可以加大200_000，当前内存有富裕。'
+  inputs:
+  - src/preprocessing/ai_elec_tfidf.py
+  outputs: []
+  steps:
+  - 我只是询问，当前不需要采取代码修改的行动
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-27T12:03:43'
+- goal: '这个部分还是要改一下。
+
+    我们建立字典是基于rel而不是全部新闻。
+
+    统计出现次数也是根据rel新闻。
+
+    然后用irrel淘汰，rel字典的涌现词。如果某个词的水平在rel和irrel二者差异不大，就应该删除。
+
+    这样的工作量会不会小一些？'
+  inputs:
+  - src/preprocessing/ai_elec_tfidf.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-27T12:16:17'
