@@ -156,3 +156,27 @@ prompts:
 
     有任何不懂都要问我'
   created_at: '2026-05-27T21:20:27'
+- goal: 调整图片。fig02
+  inputs:
+  - src/analyses/fig02_topic_rates_monthly.py
+  outputs:
+  - src/analyses/fig02_topic_rates_monthly.py
+  steps:
+  - 把二十个话题绘制在一起mention rate。整个值为色带宽度。
+  - 分开画两个图，一个是全图固定宽度，二是按值绘制总宽度
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-28T10:04:15'
+- goal: 调整图片。fig03
+  inputs:
+  - src/analyses/fig03_word_scores_monthly.py
+  outputs:
+  - src/analyses/fig03_word_scores_monthly.py
+  steps: []
+  notes: 像fig02一样增加两个图。a和b
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-28T10:13:16'
