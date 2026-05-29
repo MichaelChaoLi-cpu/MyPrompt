@@ -180,3 +180,111 @@ prompts:
 
     有任何不懂都要问我'
   created_at: '2026-05-28T10:13:16'
+- goal: '增加一个图。在fig01之后。
+
+    这个图也是显示变化趋势的是显示rel新闻和AI electricity话题的相关均值的变化的。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-28T11:42:39'
+- goal: 修改tab02。他应该是对每个话题月均值的统计。包括均值，方差，中位数值，最大月值，最大月，最小月值，最小月。
+  inputs:
+  - src/analyses/tab02_keyword_ranking.py
+  outputs:
+  - src/analyses/tab02_keyword_ranking.py
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-28T12:08:07'
+- goal: '修改tab03。这个表是哥哥话题的月份均值和月份线形回归，要话题，和slope系数，还有标准误。
+
+    系数和标准误都写到小数点后4位。显著性标在系数后*p>0.1 **p>0.05 ***p>0.01'
+  inputs:
+  - src/analyses/tab03_topic_trends.py
+  outputs:
+  - src/analyses/tab03_topic_trends.py
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-28T12:14:29'
+- goal: '现在写一个表四。
+
+    应该是月均值的自回归版本。
+
+    要考虑非线性关系。'
+  inputs: []
+  outputs:
+  - src/analyses
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-28T12:18:21'
+- goal: '现在选取图。
+
+    我需要保留现在的
+
+    fig01，fig01b, fig02a, fig02b, fig03, fig04, fig05
+
+    代码分开，然后重新排序为1-7'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-28T12:28:16'
+- goal: '现在开始写AnaSOP.md
+
+    你需要严格服从docs/LAWS/law_AnaSOP.yaml
+
+    你需要审阅src中预处理的代码preprocessed，analyses
+
+    结果存在docs/results
+
+
+    要声明的是这个是applied研究，应用研究。
+
+    你可以根据我的结果和过程分析，我的研究话题'
+  inputs:
+  - docs/LAWS/law_AnaSOP.yaml
+  - src/preprocessed
+  - src/analyses
+  - docs/results
+  outputs:
+  - docs/AnaSOP.md
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-28T13:08:58'
+- goal: '现在做export
+
+    这过程应该严格按照docs/LAWS/law_export_folder.yaml
+
+    在这个过程中要生成actionbrief，这个文档必须严格的基于这个law docs/LAWS/law_actionbrief.yaml'
+  inputs:
+  - docs/LAWS/law_export_folder.yaml
+  - src/preprocessed
+  - src/analyses
+  - docs/results
+  - docs/LAWS/law_actionbrief.yaml
+  outputs:
+  - export
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-28T13:43:54'
