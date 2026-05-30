@@ -1,1 +1,160 @@
-prompts: []
+prompts:
+- goal: '初始化整个repo。
+
+    建立example。
+
+    调整.gitignore'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-29T09:06:25'
+- goal: '开始设计
+
+    这是一个WebApp
+
+    你可以参考
+
+    ../aiESG4IRinternalAPP
+
+    这个项目的主要用来确认客户的可持续报告的网页和报告，够不够AI友好。
+
+    客户需要上传自己的url或者报告。我们通过gemini解析，生成相应的报告。
+
+    该网站应该有两个卡。
+
+    一个分析报告，一个分析url。
+
+    这个app在本地测试，将来会被部署到cloud run上去。
+
+
+    主要的目标已经写在etc/example里了。
+
+    现在，我需要给你我输出一个proposal来确认我的需求。'
+  inputs: []
+  outputs:
+  - docs/proposal.md
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-29T09:32:15'
+- goal: '我们要讨论一下这些
+
+    1. 总合评价得分（2轴 × 等级 A/B+/B/C+/C/D）
+
+    2. 摘要：优势 & 改善机会
+
+    3. Section 1 — 構造・技術面 详细评价
+
+    4. Section 2 — データ抽出可能性 详细评价
+
+    5. 改善 Roadmap（短期 / 中期 / 长期）'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: '1. 总合评价得分（2轴 × 等级 A/B+/B/C+/C/D）
+
+    现在我们有六个等级，但是评价准则还没有设计。
+
+    这之后要仔细讨论。
+
+    每个tab都应该对应自己的准则。
+
+
+    改善 Roadmap（短期 / 中期 / 长期）
+
+    Roadmap应该替换掉，改成提升建议。
+
+
+    事实上，所有的修改建议，评价都应该基于准则。'
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-29T09:46:48'
+- goal: "1. 准则内容来源 — 您手里有现成的条目清单，还是希望我基于 MTG\n  文档先起草一版供您修改？\n可以基于MTG文档，他应该条目式的。gemini负责check\
+    \ 每一条是不是满足。\n然后最后计算得分给评级。\n\n  2. 准则文件形式 — 准则存放在哪里？比如 docs/criteria_reporter.md\n\
+    \  + docs/criteria_evaluator.md，还是您有别的偏好？\n就存在docs中，他应该有中日英三个版本。"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-29T09:54:34'
+- goal: 现在开始设计app
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-29T10:21:15'
+- goal: '这样，我想是不是可以把网页中的下一层结构都探索一下。
+
+    然后修改一下criteria。
+
+    可以增加一下规则数量。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-29T11:49:13'
+- goal: '对于PDF来说，应该增加三个标准。
+
+    1. 能不能正取断句。因为排版问题，现在断句应该很困难。
+
+    2.抽出图表能不能正取排版，数字是不是一致。
+
+    3.图能不能正确的被ai理解。
+
+    数据抽出的部分。而且应该加大权重。
+
+    后面的十个项目，只要涉及数字都必须经过严格验证。
+
+    我们可以用gemini 3.5 flash进行视觉验证。pdf，可以被转换为图片后，交叉验证。'
+  inputs:
+  - docs
+  - src
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-29T14:37:20'
+- goal: '仿照../aiESG4IRinternalAPP
+
+    追加login界面'
+  inputs:
+  - ../aiESG4IRinternalAPP
+  outputs:
+  - src
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-29T16:08:32'
+- goal: '在报告的右上角，加上公司的logo。
+
+    这个logo存在etc/
+
+    两个报告，pdf和word都要'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-05-29T16:23:06'
