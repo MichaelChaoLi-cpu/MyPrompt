@@ -1,0 +1,282 @@
+prompts:
+- goal: 现在的问题是figure&table section在看版上是不是只能最大化jpg，而png不行
+  inputs:
+  - STAGE/app.py
+  outputs: []
+  steps: []
+  notes: 我希望点击png也能被放大
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T10:04:43'
+- goal: 我现在处理的是这个SHOW的图片，我在dashboard中点击放大，但是图片没有像之前一样丝滑放大。
+  inputs:
+  - STAGE/app.py
+  - STAGE/templates/index.html
+  - STAGE/static/app.js
+  - STAGE/static/style.css
+  - SHOWS/SHOW_ESG07b/figures
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T10:11:45'
+- goal: '现在要修改LAWS：LAWS/law_manuframe.yaml
+
+    在show中生成的文档中，其中table ID和figure ID必须要和show中actionbrief.yaml。
+
+    然后这个写图和表应该分散到各个句子之下，这样能够保障图表在各个段落中均匀分布。'
+  inputs:
+  - AGENT/manu_planner.py
+  - DIALOGUE/ManuPlanner.md
+  - LAWS/law_manuframe.yaml
+  - DIALOGUE/ManuPlanner.md
+  - AGENT/manu_planner.py
+  outputs:
+  - LAWS/law_manuframe.yaml
+  - DIALOGUE/ManuPlanner.md
+  - AGENT/manu_planner.py
+  steps: []
+  notes: '要把图表都发给gemini。
+
+    另外，我想确认一下，是不是目前图表只用一次？'
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T10:41:23'
+- goal: '现在调整策略。
+
+    我们把引用氛围两类：
+
+    显性引用和隐形引用。
+
+    显性引用主要针对：
+
+    - Data and Measurement
+
+    - Methodology
+
+    - Results
+
+    这两部分图表要分布于各个段了，且只用一次。
+
+    将来在writer的部分，prompt要求明确提及表名图名。
+
+
+    隐形引用：
+
+    这主要回避
+
+    - Introduction
+
+    - Discussion
+
+    这个两个section的段落中可以加图加表。
+
+    - Introduction
+
+    可以使用数据说明性图表一次，不集中一个段落。
+
+    不要求使用全部的图表。
+
+    图表id加在相关句子之下。
+
+
+    - Discussion
+
+    可以结合讨论目标选择图表。
+
+    可以使用全部图表一次，不集中一个段落。
+
+    不要求使用全部的图表。
+
+    图表id加在相关句子之下。'
+  inputs:
+  - AGENT/manu_planner.py
+  - DIALOGUE/ManuPlanner.md
+  - LAWS/law_manuframe.yaml
+  outputs:
+  - AGENT/manu_planner.py
+  - DIALOGUE/ManuPlanner.md
+  - LAWS/law_manuframe.yaml
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T11:16:12'
+- goal: 在- Discussion部分，为了使讨论不空洞，可以相对较多的引用图表。虽然不强制使用全部图表。
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T11:26:50'
+- goal: 'manu_planner之后应该在增加script，manu_planner_reviewer.py
+
+    这个代码在每次manu_planner.py执行后启动
+
+    要实现：
+
+    1.确认所有的table id和figure id都于actionbrief一致。
+
+    2.生成一个汇总表，列出table id 和figure id出现的section subsection，段落号，显性或者隐形。
+
+    该表说明全部的table和figure都被显性引用了一次。
+
+    3.确保remove功能在planning这个section可以删除plan和汇总。'
+  inputs:
+  - LAWS/law_manuframe.yaml
+  - DIALOGUE/ManuPlanner.md
+  - AGENT/manu_planner.py
+  outputs:
+  - LAWS/law_manuframe.yaml
+  - DIALOGUE/ManuPlanner.md
+  - AGENT/manu_planner.py
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T11:37:29'
+- goal: 'manu_planner之后应该在增加script，manu_planner_reviewer.py
+
+    这个代码在每次manu_planner.py执行后启动
+
+    要实现：
+
+    1.确认所有的table id和figure id都于actionbrief一致。
+
+    2.生成一个汇总表，列出table id 和figure id出现的section subsection，段落号，显性或者隐形。
+
+    该表说明全部的table和figure都被显性引用了一次。
+
+    3.确保remove功能在planning这个section可以删除plan和汇总。'
+  inputs:
+  - LAWS/law_manuframe.yaml
+  - DIALOGUE/ManuPlanner.md
+  - AGENT/manu_planner.py
+  - SHOWS/SHOW_ESG07b/manuframe.yaml
+  outputs:
+  - LAWS/law_manuframe.yaml
+  - DIALOGUE/ManuPlanner.md
+  - AGENT/manu_planner.py
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T11:40:16'
+- goal: 注意这个代码也应该有自己的LAW和DIALOGUE如果必要，确保这个结构不变。
+  inputs:
+  - AGENT/manu_planner_reviewer.py
+  outputs:
+  - AGENT/manu_planner_reviewer.py
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T11:43:21'
+- goal: 'manu_planner的显示引用跨了三个sections
+
+    - Data and Measurement
+
+    - Methodology
+
+    - Results
+
+    这三个section的图表都是显示引用。
+
+    对于这三个sections，他们的图表加一起只能用一次，而且必须全部的图表都被引用过。'
+  inputs:
+  - AGENT/manu_planner.py
+  - DIALOGUE/ManuPlanner.md
+  - LAWS/law_manuframe.yaml
+  outputs:
+  - AGENT/manu_planner.py
+  - DIALOGUE/ManuPlanner.md
+  - LAWS/law_manuframe.yaml
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T12:02:54'
+- goal: 你看这个文档，明显不太对。
+  inputs:
+  - SHOWS/SHOW_ESG07b/manuframe_review.csv
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T12:05:28'
+- goal: '为了实现显示引用在
+
+    - Data and Measurement
+
+    - Methodology
+
+    - Results
+
+    table 和 figure id不重复
+
+    我们可以直接通过py中的代码硬性实现。
+
+    你觉得呢'
+  inputs:
+  - AGENT/manu_planner.py
+  - LAWS/law_manuframe.yaml
+  - DIALOGUE/ManuPlanner.md
+  outputs:
+  - AGENT/manu_planner.py
+  - LAWS/law_manuframe.yaml
+  - DIALOGUE/ManuPlanner.md
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T12:11:46'
+- goal: '优化writing section.
+
+    你先简述一下这个过程的逻辑。
+
+    输入哪些文档，输出哪些文档？
+
+    生成的逻辑是什么？'
+  inputs:
+  - AGENT/writer.py
+  - DIALOGUE/Writer.md
+  - LAWS/law_manu_md.yaml
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T14:01:33'
+- goal: '现在修改输入，如果要写的部分包括图表，那么应该把图表作为多模态数据传入Gemini。
+
+    1. 由于书写下一个section时，已经生成的部分应该全部输入gemini。所以他们包括的前文包括的图应该也一并送入gemini。这应该通过程序py硬控。
+
+    2. 在启动书写之前，图表序号应该按照出现顺序重新排序。这个排序工作应该通过程序完成，结果写进一个yaml中，完成manuframe.yaml，actionbrief.yaml，figuretableorder.yaml的映射。这个文档是为了确保图表在论文中按照先后顺序出现。
+
+    3. Introduction部分禁止出现图和表序号。因为是隐式引用，但是Discussion可以出现。这应该也通过py硬控比较好。'
+  inputs:
+  - AGENT/writer.py
+  - DIALOGUE/Writer.md
+  - LAWS/law_manu_md.yaml
+  outputs: []
+  steps: []
+  notes: 我觉得第三步的时候，可以当开始写某个section时，触发py加载额外的内容。
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T14:21:45'
