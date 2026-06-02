@@ -280,3 +280,101 @@ prompts:
 
     有任何不懂都要问我'
   created_at: '2026-06-01T14:21:45'
+- goal: 先帮我看看这部分在做什么，给我简述一下
+  inputs:
+  - AGENT/evidence_editor.py
+  - AGENT/evidence_scouter.py
+  - DIALOGUE/EvidenceEditor.md
+  - DIALOGUE/EvidenceScouter.md
+  outputs:
+  - AGENT/evidence_scouter.py
+  - AGENT/evidence_editor.py
+  - DIALOGUE/EvidenceEditor.md
+  - DIALOGUE/EvidenceScouter.md
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T14:56:29'
+- goal: '1. 现在由于writer那一步重新排序了图表，因此figuretableorder.ymal，应该也纳入输入。这需要在代码上修改，通过程序硬实现。
+
+    2. 应该把图和表作为多模态数据直接输入进去，这一步也应该由程序硬实现。'
+  inputs:
+  - AGENT/evidence_editor.py
+  - AGENT/evidence_scouter.py
+  - DIALOGUE/EvidenceEditor.md
+  - DIALOGUE/EvidenceScouter.md
+  - LAWS/law_evidence_scout.yaml
+  - SHOWS/SHOW_ESG07b/figuretableorder.yaml
+  outputs:
+  - AGENT/evidence_scouter.py
+  - AGENT/evidence_editor.py
+  - DIALOGUE/EvidenceEditor.md
+  - DIALOGUE/EvidenceScouter.md
+  - LAWS/law_evidence_scout.yaml
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T15:07:00'
+- goal: '简述Review这个section
+
+    输入文件是什么，输出文件是什么'
+  inputs:
+  - AGENT/manu_reviewer.py
+  - DIALOGUE/ManuReviewer.md
+  - LAWS/law_manu_reviewer.yaml
+  outputs:
+  - AGENT/manu_reviewer.py
+  - DIALOGUE/ManuReviewer.md
+  - LAWS/law_manu_reviewer.yaml
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T16:09:03'
+- goal: 其中的四步都干嘛
+  inputs:
+  - AGENT/manu_reviewer.py
+  - DIALOGUE/ManuReviewer.md
+  outputs:
+  - AGENT/manu_reviewer.py
+  - DIALOGUE/ManuReviewer.md
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T16:57:56'
+- goal: 我觉得figuretbaleorder也应该输入，因为它更正了图表编号。
+  inputs:
+  - AGENT/manu_reviewer.py
+  - DIALOGUE/ManuReviewer.md
+  - SHOWS/SHOW_ESG07b/figuretableorder.yaml
+  outputs:
+  - AGENT/manu_reviewer.py
+  - DIALOGUE/ManuReviewer.md
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T17:04:06'
+- goal: Improver这个section的remove功能要检查，确保启动remove之后可以删除这个section相关的全部中间文档和结果文档
+  inputs:
+  - AGENT/sentence_improver.py
+  - DIALOGUE/SentenceImprover.md
+  - LAWS/law_sentence_improver.yaml
+  outputs:
+  - AGENT/sentence_improver.py
+  - DIALOGUE/SentenceImprover.md
+  - LAWS/law_sentence_improver.yaml
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-01T21:17:26'
