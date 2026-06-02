@@ -13,3 +13,33 @@ prompts:
 
     有任何不懂都要问我'
   created_at: '2026-05-30T19:32:19'
+- goal: '这个law应该修改。
+
+    1. 要明确这个文档是actionbrief的前序文档，也是export的前序文档，所以在这个项目启动之前，export和actionbrief的内容不应该出现在其中。它是这个东西的指导文件，为他们的建立提供一个轮廓一个方向，中间说的内容不必须全部执行。
+
+    2. 因此，section 8 和 9的规定一定是错误的
+
+    3. section 7 的规定也是不合理的。exports/nbs/已经被淘汰了，应该是export/code。不仅如此，其规定的工作流也不太对。这个也要修改'
+  inputs:
+  - docs/LAWS/law_AnaSOP.yaml
+  outputs:
+  - docs/LAWS/law_AnaSOP.yaml
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-02T12:54:08'
+- goal: '1.table ID和figure ID不在使用任何数字。
+
+    2.dataset也应该有人类可读的名字'
+  inputs:
+  - docs/LAWS/law_actionbrief.yaml
+  outputs:
+  - docs/LAWS/law_actionbrief.yaml
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-02T13:20:38'
