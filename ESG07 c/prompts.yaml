@@ -1,0 +1,123 @@
+prompts:
+- goal: '先确认这个代码的流程。
+
+    输入是什么
+
+    输出是什么'
+  inputs:
+  - src/preprocessing/dedup.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-02T14:52:49'
+- goal: '我们需要修改这个代码。
+
+    在判断时，我们可以合并这两部分title、content
+
+    只有他们完全一样时，我们认为这是重复新闻。
+
+    生成的文档在data/processed/deduped_aug'
+  inputs:
+  - src/preprocessing/dedup.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-02T15:04:24'
+- goal: '我们需要修改这个代码。
+
+    在判断时，我们可以合并这两部分title、content
+
+    只有他们完全一样时，我们认为这是重复新闻。
+
+    生成的文档在data/processed/deduped_aug'
+  inputs:
+  - src/preprocessing/dedup.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-02T15:05:13'
+- goal: 根据这个代码，写一个新的代码，把数据按照年划分后，对比后选前100，保存出来，应该有多个表。
+  inputs:
+  - src/preprocessing/energy_sec_tfidf.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-03T09:10:04'
+- goal: 'AI_ELEC_THRESHOLD = 0.8
+
+    把这些全局设置放入config.py中如何'
+  inputs:
+  - src/preprocessing/energy_sec_tfidf.py
+  - src/preprocessing/energy_sec_tfidf_yearly.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-03T09:31:27'
+- goal: dvc track data
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-03T09:38:57'
+- goal: 设计一个代码，核算每个国家每天被多少rel的article提及，比例是多少。
+  inputs:
+  - data/raw/country_dict_0.json
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-03T10:55:53'
+- goal: 把ngram只用1
+  inputs:
+  - src/preprocessing/energy_sec_tfidf.py
+  - src/preprocessing/energy_sec_tfidf_yearly.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-03T11:30:38'
+- goal: 改一下这个代码分析top30
+  inputs:
+  - src/preprocessing/energy_coemerging.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-03T13:52:19'
+- goal: 'src/preprocessing/ai_elec_topic_counts.py是不是已经实现了，如果实现了，则删除。
+
+    src/preprocessing/ai_elec_word_scoring.py更新符合当前的设定，也用top30进行分析。'
+  inputs:
+  - src/preprocessing/ai_elec_topic_counts.py
+  - src/preprocessing/ai_elec_word_scoring.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-03T14:00:13'

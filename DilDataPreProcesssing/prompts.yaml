@@ -1,0 +1,77 @@
+prompts:
+- goal: 使用uv创建环境，然后用pyproject.toml管理环境
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-03T14:17:33'
+- goal: 'MICS的raw数据存在这里
+
+    /Volumes/MikesDataBackup/MICS/raw
+
+    这些信息可以写入MICS/src/config.py
+
+
+    执行代码输出的结果可以存在/Volumes/MikesDataBackup/MICS/precessed'
+  inputs:
+  - MICS/src
+  outputs:
+  - MICS/src
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-03T14:26:54'
+- goal: '现在进入config.py中raw路径，去看看有什么数据，我想把它们整合成一个大的数据集。而不是分散储存。
+
+    数据来源是这里https://mics.unicef.org/surveys'
+  inputs:
+  - MICS/src/config.py
+  outputs:
+  - MICS/src/config.py
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-03T14:32:30'
+- goal: '现在进入config.py中raw路径，去看看有什么数据，我想把它们整合成一个大的数据集。而不是分散储存。
+
+    数据来源是这里https://mics.unicef.org/surveys'
+  inputs:
+  - MICS/src/config.py
+  outputs:
+  - MICS/src/config.py
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-03T14:34:28'
+- goal: '解决这些问题。
+
+    1. 我想知道这几个问卷可以拼在一起吗，横向整合，每一行是一个个人。还是其他的情况。
+
+    2.我想整合所有轮次，全部国家，但是我不确认是整合成一个表还是多个表，这需要根据问题一的回答来判断。你觉得怎么做合理。
+
+    3.纵向拼接，增加国家和轮次。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: "现在大致了解了数据结构，在写代码之前需要确认几个问题：\n\n  1. 数据模块：每个国家都包含多个问卷文件（hh.sav=家庭、hl.sav=家庭成员、wm.sav=女性、ch.sav=儿童\n\
+    \  ，有的还有 bh.sav、fs.sav 等）。你想整合哪个/哪些模块？\n  2. MICS 轮次：数据横跨 MICS2 到 MICS6，不同轮次的变量名不一致（比如旧数据用\
+    \ ChAL.sav，新数据用\n  ch.sav）。你想整合所有轮次，还是只针对特定轮次（如只做 MICS6）？\n  3. 整合方式：你希望把所有国家的同一个模块纵向拼接（即每行一个受访者，增加国家/轮次列）吗？"
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-03T14:39:46'

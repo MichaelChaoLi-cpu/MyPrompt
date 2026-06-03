@@ -378,3 +378,67 @@ prompts:
 
     有任何不懂都要问我'
   created_at: '2026-06-01T21:17:26'
+- goal: '追加一个功能，在设置边上显示版本号，版本号旁边加一个按钮更新版本，
+
+    这个按钮，检测git main branch是不是和remote一致。
+
+    如果不一致则弹窗提醒，不一致，问是否更新。点击更新到的话，则执行
+
+    git fetch origin
+
+    git pull origin main
+
+    完成后，提示已经更新。可以让用户关闭窗口。
+
+    如果已经一致，则直接弹窗提示一致。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-02T16:47:30'
+- goal: '追加一个功能，在设置边上显示版本号，版本号旁边加一个按钮更新版本，
+
+    这个按钮，检测git main branch是不是和remote一致。
+
+    如果不一致则弹窗提醒，不一致，问是否更新。点击更新到的话，则执行
+
+    git fetch origin
+
+    git pull origin main
+
+    完成后，提示已经更新。可以让用户关闭窗口。
+
+    如果已经一致，则直接弹窗提示一致。'
+  inputs:
+  - STAGE/static
+  - STAGE/templates
+  - STAGE/app.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-02T16:47:50'
+- goal: '追加一个管理性功能。
+
+    Upload Canon Card。这个卡可以给CANON/ris上传ris。
+
+    可以通过CANON/ris的git与remote 同步。
+
+    有新ris后，可以重新通过TOOLS/convert_ris_folder_to_yaml.py更新index.yaml
+
+    更新后可以同步到root main branch'
+  inputs:
+  - CANON/ris
+  - TOOLS/convert_ris_folder_to_yaml.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我'
+  created_at: '2026-06-02T17:43:40'
