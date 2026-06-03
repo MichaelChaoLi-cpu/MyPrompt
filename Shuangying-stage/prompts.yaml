@@ -442,3 +442,24 @@ prompts:
 
     有任何不懂都要问我'
   created_at: '2026-06-02T17:43:40'
+- goal: '我们给双鹰追加一个功能。
+
+    这个功能是为了追加CLASSICS的。
+
+    跟ris类似也是需要选择上传文件的。应该是一个docx
+
+    然后点击 类似 重建 index.yaml可以启动AGENT/classics_builder.py
+
+    然后点击commit + push，可以把内容推到remote'
+  inputs:
+  - CLASSICS/papers
+  - AGENT/classics_builder.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-03T16:37:59'
