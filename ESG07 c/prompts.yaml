@@ -121,3 +121,65 @@ prompts:
 
     有任何不懂都要问我'
   created_at: '2026-06-03T14:00:13'
+- goal: '加下来可以做AnaSOP.md了
+
+    这是个应用研究。
+
+    我们要解决一下8个问题：
+
+    1.Energy Security热度是否增加；
+
+    预期结果是一个月度的折线图，加一个年度汇总表，（最后一行是汇总）
+
+    2.Energy Security文章是不是讨论话题更加concrete
+
+    预期结果是一个月度的Z-score
+
+    3.基于TFIDF分析，哪些词能够明确区分相关和无关新闻
+
+    这应该是一个词云图，可以只要top30
+
+    4.top30的月度文章数怎么变化
+
+    30个子图的折线图5*6，z-score
+
+    5.时间回归来总结他们的趋势
+
+    一个表
+
+    6.这30个词的共生关系，谁和谁更亲密
+
+    弦图
+
+    7.美国能源与哪个国家的关系更紧密，在新闻界看来
+
+    地图：美国灰色，其他国家关系愈大越红
+
+    8.最终重要的10个国家的月度变化情况
+
+    10子图折线图'
+  inputs:
+  - docs/LAWS/law_AnaSOP.yaml
+  - ../ESG07b/export/
+  outputs:
+  - docs/AnaSOP.md
+  steps: []
+  notes: 可以参考这里的图表
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-03T15:20:51'
+- goal: 根据AnaSOP写分析代码。
+  inputs:
+  - docs/AnaSOP.md
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-03T16:15:38'
