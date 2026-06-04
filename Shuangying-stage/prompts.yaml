@@ -463,3 +463,148 @@ prompts:
 
     用中文问我'
   created_at: '2026-06-03T16:37:59'
+- goal: '我们要改Planning这个section。
+
+    你先帮我汇总这个section的流程。
+
+    输入输出'
+  inputs:
+  - AGENT/manu_planner.py
+  - AGENT/manu_planner_reviewer.py
+  - DIALOGUE/ManuPlanner.md
+  - DIALOGUE/ManuReviewer.md
+  - LAWS/law_manu_reviewer.yaml
+  - LAWS/law_manuframe.yaml
+  - STAGE/app.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-04T08:23:52'
+- goal: '为了确保之后的section写作正确，我做出以下安排：
+
+    1.在生成manuframe.yaml原有结构不变，但是图表ID暂时填充在应该出现的位置。
+
+    2.进行review确认正确。reviewer给图表分配正式编号应该是“Figure 1”和“Table 1”这类的，并完成figuretableorder.yaml
+
+    3.替换manuframe.yaml为正式编号。
+
+    4.将来多模态生成是，查找图表通过正式编号-》figuretableorder.yaml-〉actionbrief.yaml-》table/file文档。这些都应该通过程序硬链接'
+  inputs:
+  - SHOWS/SHOW_ESG07c
+  outputs: []
+  steps: []
+  notes: "这是个合理的设计问题。我来问几个关键点帮助判断：\n\n  关于用途：这个 figuretableorder.yaml 的目的是给下游阶段（比如\
+    \ Writing）用的吗？也就是说，Writer\n  写稿时用的是 \"Figure 1 / Figure 2\" 这样的序号，而不是 \"fig01\
+    \ / fig02\" 这样的内部 ID？\n这是一个字典完成Figure 1和Table 1到图表ID的映射。\n你可以看ESG07c这是当前要进行的。\n\
+    \n  关于排序依据：出现顺序是按 explicit 引用的顺序来定（即在 Data and Measurement → Methodology →\n \
+    \ Results 中第一次出现的顺序），还是按整篇文章（包括 Introduction / Discussion 的 implicit\n  引用）的顺序？\n\
+    按explicit引用顺序\n\n  关于 figures 和 tables 的编号：是分开编（Figure 1, Figure 2 ... Table 1,\
+    \ Table 2\n  ...），还是合并编（Figure/Table 1, 2, 3 ...）？\nFigure 和Table单独编码。"
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-04T08:40:46'
+- goal: '现在我们来进行writting这个section的修改。
+
+    先确认一下输入输出'
+  inputs:
+  - AGENT/writer.py
+  - DIALOGUE/Writer.md
+  - LAWS/law_manu_md.yaml
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-04T08:53:37'
+- goal: "2. 加载/构建 figuretableorder：_load_or_build_figuretableorder\n    - 若 figuretableorder.yaml\
+    \ 存在 → 直接加载\n    - 若不存在 → 按 GENERATION_SECTION_ORDER 遍历 manuframe 自动编号并保存\n  \
+    \  - 格式（Writer 期望的）：内部ID → {display_id: \"Figure 1\", section, subsection}\n这一步要修改。这个文档必须存在。不错在就终止报错。\n\
+    \n  在修改 Writer 之前，我需要确认一点：\n  \n  Writer 里 _collect_written_figure_ids 和多模态图片加载，是通过内部ID去\
+    \ actionbrief\n  查找文件路径的。修改后的查找链应该是：\n\n  ▎ manuframe 中的 \"Figure 1\" → figuretableorder.yaml\
+    \ → 内部ID \"fig_workflow\" → actionbrief.yaml \n  ▎ → 文件路径\n\n  这条链是否正确？还有，_build_figuretableorder\
+    \ 这个函数（Writer 自己构建 figuretableorder\n  的逻辑）是否应该完全删除，改为强制要求 Planning 阶段必须先运行（即\
+    \ Writer 发现\n  figuretableorder.yaml 不存在时报错而非自建）？\n这条路径正确，Planning必须先行。\n\n注意图表是渐进式加在，不是一次性直接全部丢给llm的"
+  inputs:
+  - AGENT/writer.py
+  - DIALOGUE/Writer.md
+  - LAWS/law_manu_md.yaml
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-04T08:59:33'
+- goal: 'Evidence阶段到底做了什么？
+
+    为什么速度相对比较慢？'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-04T09:14:31'
+- goal: '现在帮我分析Decoration部分。
+
+    他做了什么，输入输出是什么'
+  inputs:
+  - DIALOGUE/Decorator.md
+  - AGENT/decorator.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-04T11:53:49'
+- goal: "识别未定义缩写，LLM 查找全称，在首次出现处插入 Full Form (ABBR) \n这一步是不是应该由代码硬实现，REGEX是个可选项"
+  inputs:
+  - DIALOGUE/Decorator.md
+  - AGENT/decorator.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-04T11:55:27'
+- goal: "⏺ 我有几个疑问，想先确认再分析：\n\n  1. 你说\"由代码硬实现\"——你指的是哪一部分？\n    - 用 REGEX 识别候选缩写（目前已是代码）\n\
+    \    - 查找缩写全称（目前是 LLM）\n    - 在首次出现处插入文字（目前已是代码）\n  2. 你说\"REGEX是个可选项\"——你的意思是\
+    \ REGEX 可以用但不是必须用，还是说 REGEX 应该被替代掉？\n  3. 你提这个问题，是发现了某个具体的问题（比如 LLM\n  查全称不准、某个缩写没被处理到），还是在思考这一步的设计是否合理？\n\
+    \n好，我认为1和2的问题不大。\n我在之前的例子中发现Abbr会被多次定义。\n我的规定是这样的：\n1 abstract和正文部分是独立的。\n换句话说，正文部分，所有缩写都要重新定义。\n\
+    而且一次定义后后面就只用缩写：\n举个例子Large Language Model (LLM)，之后所有的Large Language Model都应该被替换为LLM。\n\
+    我建议加一个yaml，定义原词和缩写。然后替换常见的情况比如第一次出现之后的Large Language Model和Large Language Model\
+    \ (LLM)都应该是LLM。\n然后现在Reference相关的内容不能动。"
+  inputs:
+  - DIALOGUE/Decorator.md
+  - AGENT/decorator.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-04T12:03:09'

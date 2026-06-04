@@ -1,0 +1,20 @@
+prompts:
+- goal: '改这个代码，我现在想更新研究话题到Energy Price
+
+    所以你给我改一下话题，我需要十个同意话题。
+
+    然后更换到代码中去，然后名字也改了。
+
+
+    是不是可以把，十个关键词写入config.py'
+  inputs:
+  - src/preprocessing/energy_sec_scoring.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-04T16:00:47'
