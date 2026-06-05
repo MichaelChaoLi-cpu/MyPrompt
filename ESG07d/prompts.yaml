@@ -30,3 +30,71 @@ prompts:
 
     用中文问我'
   created_at: '2026-06-04T16:39:54'
+- goal: '我们已经选择出了美国最关注的国家。
+
+    现在分析哪个国家被突然大量异常的提及。
+
+    我的思路是计算28日中相关新闻的某个国家提及比例，每次向下移动一日，然后最后将其z-score话。
+
+    生成两个表行是日期，列是国名。一个记录比例一个记录z-score。
+
+    我想发现某个时间某国家突然高比例的被提及。
+
+    你觉得这个思路怎么样？
+
+    如果可以帮我写代码。'
+  inputs:
+  - data/processed/country_daily_mentions.csv
+  - data/processed/top30_countries.csv
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-05T09:54:37'
+- goal: '根据刚刚的计算
+
+    data/processed/country_anomaly_consensus.csv
+
+    进行事件筛选。
+
+    对于国家一个个进行分析。
+
+    原理是将提及某个国家的能源价格相关的新闻，按照刚刚筛选出的时间分成两组，时间窗口组为表格中的+14天。
+
+    然后通过TF-IDF来选出差别最大的100词。
+
+
+    你可以参考这个代码。
+
+    写一个新的'
+  inputs:
+  - src/preprocessing/energy_sec_tfidf.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-05T10:45:47'
+- goal: "问题1：如何判断文章\"提及某国\"？ \n可以参考src/preprocessing/country_daily_mentions.py，但是只要data/processed/country_anomaly_consensus.csv这个表格中的中提及的国家，可以把它们的id，按日分别存入data/processed/country/date.parquet，以方便再次启动。\n\
+    问题2：能源价格相关的判断\n参考代码是别的项目的代码，我的意思是你参考逻辑即可\n用这个目录 energy_price_scores\n\n  问题3：两组的定义确认\n\
+    \n  - 窗口组：anomaly 表中某国每个异常日期 t，取 [t, t+14) 内的文章\n  - 对照组：同一国家其他所有日期的文章（排除窗口期）\n\
+    \n如果窗口是连续的就是连续的，就是第一个日期到最后一天+14。如果中间断开，且大于14，则按照两个窗口算。"
+  inputs:
+  - src/preprocessing/country_daily_mentions.py
+  - data/processed/country_anomaly_consensus.csv
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-05T10:56:35'
