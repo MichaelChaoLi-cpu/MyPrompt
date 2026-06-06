@@ -118,3 +118,91 @@ prompts:
 
     用中文问我'
   created_at: '2026-06-04T20:56:55'
+- goal: '接下来，我需要设计一个wep app帮助我完成数据对齐。
+
+    我需要对齐MICS数据。
+
+    原始数据存在这个config中的位置。
+
+    那个variable_dictionary.yaml中存了所有的变量名。
+
+    你可以看看SUMARY_EN，数据分成多个MODULE。
+
+    在APP中可以选MODULE。
+
+    这个App的作用是对齐拾取变量。
+
+    APP氛围左右两个部分，左侧为新的数据对齐字典，右侧为为旧的数据字典。
+
+    右边的条目可以按表格显示可以被选中，左侧为列表显示可以折叠，折叠的item名称为新的变量名。
+
+    1，左侧可以新建变量名，需要选中新名称，然后选中右侧的老名称，后点加入，就加入了左边的新变量名之下。
+
+    2，被加入的变量就在右侧消失。
+
+    3，左侧应该生成一个yaml文档来持久化结果。
+
+    4，左侧的选中项目也可以被删除，一旦删除就会再出现右侧。
+
+    5，右侧的数据是不是应该也要缓存
+
+    6，最上边一栏可以选择module，这样可以压缩右侧选择的范围。
+
+    7，右侧的显示状态可以像csv，那就是一个例子
+
+    8，因为text中有非英文内容，我需要翻译，可以用gemini来做这个，你可以仿照../HappyToGo/AGENT/llm.py来调用llm
+
+    9，我已经加入了gemini的key'
+  inputs:
+  - MICS/src/config.py
+  - MICS/data/variable_dictionary.yaml
+  - MICS/docs/SUMMARY_EN.md
+  - MICS/data/hh_variables.csv
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-05T15:11:17'
+- goal: ROUNDS这一部分，是不是可以也显示国家，可以加一列
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-05T15:29:08'
+- goal: '还有一个问题，事实上，TICKER和TEXT可能会不一致，如果二者不一致，就应该用表达成两条。
+
+    另外，要现实待分离的条目总素。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-05T15:39:02'
+- goal: '在TEXT后加一列，将来保存翻译文档内容。
+
+    我希望翻译能持久化。
+
+    可以不可以把variable_dictionary直接分解成多个yaml这样，然后APP启动时候就可以选择减小渲染压力。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-05T16:00:53'
