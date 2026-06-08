@@ -608,3 +608,122 @@ prompts:
 
     用中文问我'
   created_at: '2026-06-04T12:03:09'
+- goal: '在Evidence这个section中，我发现好像系统没有正确拾取图表
+
+    [Evidence Editor] Data and Measurement / Country Mention Data / p0 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Data and Measurement / Country Mention Data / p1 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Data and Measurement / ETF Price Data / p0 (tables=[], figs=[])
+
+    [Evidence Editor] Data and Measurement / ETF Price Data / p1 (tables=[], figs=[])
+
+    [Evidence Editor] Data and Measurement / Event Definition Data / p0 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Data and Measurement / Event Definition Data / p1 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Data and Measurement / Event Definition Data / p2 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Data and Measurement / News Corpus and Energy Price Relevance
+    / p0 (tables=[], figs=[])
+
+    [Evidence Editor] Data and Measurement / News Corpus and Energy Price Relevance
+    / p2 (tables=[], figs=[])
+
+    [Evidence Editor] Methodology / Data Preparation and Corpus Construction / p0
+    (tables=[], figs=[])
+
+    [Evidence Editor] Results / Energy Price News Coverage Trends / p0 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Energy Price News Coverage Trends / p1 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Energy Price News Coverage Trends / p2 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Energy Price News Coverage Trends / p3 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Geographic Prominence of Countries / p0 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Geographic Prominence of Countries / p1 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Identified High-Impact International Events / p0 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Identified High-Impact International Events / p1 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Impact of Events on Energy ETF Prices / p0 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Impact of Events on Energy ETF Prices / p1 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Impact of Events on Energy ETF Prices / p2 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Impact of Events on Energy ETF Prices / p3 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Impact of Events on Energy ETF Prices / p4 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Temporal Anomalies in Country Coverage / p0 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Results / Temporal Anomalies in Country Coverage / p1 (tables=[],
+    figs=[])
+
+    [Evidence Editor] Discussion / Geopolitical Events Driving Country-Specific Media
+    Spikes / p0 (tables=[], figs=[])
+
+    [Evidence Editor] Discussion / Geopolitical Events Driving Country-Specific Media
+    Spikes / p1 (tables=[], figs=[])
+
+    [Evidence Editor] Discussion / Geopolitical Events Driving Country-Specific Media
+    Spikes / p2 (tables=[], figs=[])
+
+    [Evidence Editor] Discussion / Growing Media Attention and Semantic Focus / p0
+    (tables=[], figs=[])
+
+    [Evidence Editor] Discussion / Growing Media Attention and Semantic Focus / p1
+    (tables=[], figs=[])
+
+    [Evidence Editor] Discussion / Growing Media Attention and Semantic Focus / p2
+    (tables=[], figs=[])
+
+    [Evidence Editor] Discussion / Policy Implications / p0 (tables=[], figs=[])
+
+    [Evidence Editor] Discussion / Policy Implications / p1 (tables=[], figs=[])
+
+    [Evidence Editor] Discussion / Policy Implications / p2 (tables=[], figs=[])
+
+
+    因为我在actionbrief之后加了一层新的figuretableorder，会不会因为有这个，使得图表不能背准确锁定'
+  inputs:
+  - AGENT/evidence_editor.py
+  - AGENT/evidence_scouter.py
+  - DIALOGUE/EvidenceEditor.md
+  - DIALOGUE/EvidenceScouter.md
+  - LAWS/law_evidence_scout.yaml
+  - STAGE/app.py
+  - SHOWS/SHOW_ESG07d/actionbrief.yaml
+  - SHOWS/SHOW_ESG07d/figuretableorder.yaml
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-08T08:51:27'
