@@ -206,3 +206,21 @@ prompts:
 
     用中文问我'
   created_at: '2026-06-05T16:00:53'
+- goal: '你知道哪个国家的哪个波次的问卷是英文的吗。
+
+    我倾向于把一个MICS5或者6的hh.sav转化为csv
+
+    代码和结果分别写到MICS-AI'
+  inputs:
+  - MICS/data/variable_dictionary.yaml
+  outputs:
+  - MICS-AI/data
+  - MICS-AI/src
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-08T09:22:01'
