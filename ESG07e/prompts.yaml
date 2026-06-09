@@ -1,0 +1,38 @@
+prompts:
+- goal: '我要做一个关于Agrifood System的研究。
+
+    第一步，我要过滤全美2021-09到2026-05的新闻，判断他们是不是与Agrigood system.
+
+    请修改这两个代码，他们是从其他项目中复制过来的。
+
+    命名和关键词都不对。'
+  inputs:
+  - src/preprocessing/energy_price_scoring.py
+  - src/preprocessing/config.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-09T10:31:22'
+- goal: '我们现在想分析各个新闻是不是提及各个州。
+
+    我们从之前的项目中复制了两个代码。你帮我看一下，确认一下逻辑，然后开始修改。
+
+    州的dictionary，data/raw/state_dict_1.json。'
+  inputs:
+  - src/preprocessing/country_article_index.py
+  - src/preprocessing/country_daily_mentions.py
+  - data/raw/state_dict_1.json
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-09T11:27:15'
