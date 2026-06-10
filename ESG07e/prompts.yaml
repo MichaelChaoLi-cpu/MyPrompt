@@ -36,3 +36,18 @@ prompts:
 
     用中文问我'
   created_at: '2026-06-09T11:27:15'
+- goal: 'src/preprocessing/state_article_index.py
+
+    这个代码能断点启动吗。
+
+    然后增加--rerun选项，用来重跑，默认断点启动'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-09T16:47:15'

@@ -224,3 +224,112 @@ prompts:
 
     用中文问我'
   created_at: '2026-06-08T09:22:01'
+- goal: '我现在需要把每个问卷的column和column label都提取出来，做成一个yaml
+
+    raw data存在.env的地址中，我觉得有必要建立一个config来存取这些设置。
+
+    现在，先在MICS-HH/docs中写入yaml的范式。
+
+    MICS-HH/docs/raw.yaml
+
+    这个yaml，每个item应该包括两个条目：
+
+    列名和sav的label。
+
+    column_in_raw_sav
+
+    column_label_in_raw_sav'
+  inputs:
+  - .env
+  outputs:
+  - MICS-HH/data
+  - MICS-HH/src
+  - MICS-HH/docs
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-09T14:29:24'
+- goal: 根据.env的数据地址先在MICS-HH/src中建立config
+  inputs:
+  - .env
+  outputs:
+  - MICS-HH/data
+  - MICS-HH/src
+  - MICS-HH/docs
+  - MICS-HH/src
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-09T14:39:08'
+- goal: '现在写代码在MICS-HH/src，提取每个sav的列名和label，根据hh_raw.yaml来建立。
+
+    输出的在MICS-HH/data
+
+    输出的schema应该为MICS-HH/data/HH/raw/{dataset name}/hh.yaml dataset name就是raw data中的文件夹名称。
+
+    每个生成的hh.yaml都应该干净，把MICS-HH/docs/hh_raw.yaml中的例子先删除掉。'
+  inputs:
+  - MICS-HH/docs/hh_raw.yaml
+  outputs:
+  - MICS-HH/src
+  - MICS-HH/data
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-09T14:49:16'
+- goal: '现在要处理这些yaml
+
+    保持MICS-HH/data/HH/raw结构不变，增加一个新的子folder MICS-HH/data/HH/translate
+
+    这个问价也是{dataset name}/hh.yaml'
+  inputs:
+  - MICS-HH/data/HH/raw
+  - MICS/app/llm.py
+  outputs:
+  - MICS-HH/data/HH/translate
+  steps:
+  - 监测column_in_raw_sav中是否包括$,删除包括$的columns。
+  - 监测前五column_label_in_raw_sav是不是英文，在translate文件夹中yaml加一个字段origin_language
+  - 在columns上加两个字段，column_label_in_english这是把非英文的字段翻译的结果。这个翻译可以由gemini来完成。如果原始语言是英文则直接把column_label_in_raw_sav复制过来。
+  - 在获取column_label_in_english，用gemini对这个英文label embedding。然后把embedding保存到embedding_of_english字段中
+  notes: 'gemini模型用flash-2.5就可以了。
+
+    在MICS-HH/src中建立新的llm代码。不是调用这个MICS/app/llm.py
+
+    MICS/app/llm.py只是一个例子'
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-10T08:47:48'
+- goal: '有两个点需要讨论。
+
+    1.embedding_of_english破坏了yaml原本的可读性。
+
+    是不是应该分文件夹保存，比如做一个MICS-HH/data/HH/tranlate_embeding保持结构，然后存一个hh.csv，第一列为column_in_raw_sav。
+
+    2.log，处理完每个yaml都应该写一条log。log中需要统计token用量。'
+  inputs:
+  - MICS-HH/data/HH
+  outputs: []
+  steps: []
+  notes: 写完代码后，用一个数据进行测试。不要全跑
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-10T09:38:57'
