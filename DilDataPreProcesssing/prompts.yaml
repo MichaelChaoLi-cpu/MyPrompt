@@ -333,3 +333,260 @@ prompts:
 
     用中文问我'
   created_at: '2026-06-10T09:38:57'
+- goal: '现在翻译和embedding还在进行中。
+
+    不过我们可以尝试着做下匹配设计。
+
+    我们应该用embedding检测一下，同一问卷下是不是有重复问题。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-10T14:10:26'
+- goal: "现在翻译和embedding还在进行中。\n不过我们可以尝试着做下匹配设计。\n我们应该用embedding检测一下，同一问卷下是不是有重复问题。\n\
+    在MICS-HH/src写代码，对每一个问卷两两对比。\n结果写在MICS-HH/data/HH/questionnaire_dedup/{dataset}/dup.yaml\n\
+    \n只成对记录潜在重复的columns。包括MICS-HH/data/HH/translate中的\n- column_in_raw_sav\n  column_label_in_raw_sav\n\
+    \  column_label_in_english\n我们需要讨论一下怎么决定相似度"
+  inputs:
+  - MICS-HH/src
+  - MICS-HH/data/HH/translate
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-10T14:17:41'
+- goal: "现在翻译和embedding还在进行中。\n不过我们可以尝试着做下匹配设计。\n我们应该用embedding检测一下，同一问卷下是不是有重复问题。\n\
+    在MICS-HH/src写代码，对每一个问卷两两对比。\n结果写在MICS-HH/data/HH/questionnaire_dedup/{dataset}/dup.yaml\n\
+    \n只成对记录潜在重复的columns。包括MICS-HH/data/HH/translate中的\n- column_in_raw_sav\n  column_label_in_raw_sav\n\
+    \  column_label_in_english\n我们需要讨论一下怎么决定相似度"
+  inputs:
+  - MICS-HH/src
+  - MICS-HH/data/HH/translate
+  - MICS-HH/data/HH/translate_embedding
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-10T14:18:04'
+- goal: '接下来要解决跨问卷对齐任务。写一段代码
+
+    我们想通过程序建立一个对齐清单。
+
+    输入主要是MICS-HH/data/HH/下的三个文件夹。
+
+    输出应该是一个yaml，alignment.yaml
+
+    这个yaml每个变量一个字段，每个变量大概是这个感觉的
+
+    varname: 这是第一次出现的column_label_in_english，写法上全小写两端去空格，中间空格换成_
+
+    之后跟着一个列表，列表的每个元素都应该包括：
+
+    - dataset_name：出现的dataset 名称
+
+    - column_in_raw_sav：
+
+    - column_label_in_english：
+
+    如果在dup.yaml中，同一问卷的两个字段被判重复，则去第一个即可。'
+  inputs:
+  - MICS-HH/data/HH/translate
+  - MICS-HH/data/HH/translate_embedding
+  - MICS-HH/data/HH/questionnaire_dedup
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-10T15:04:13'
+- goal: '在用embedding对齐信息后。
+
+    我们发现解决不了就是问题同义，但是由于多了一次辅助词，致使embedding差距很大。而不能完全对齐。
+
+    你觉得有哪些途径解决。'
+  inputs:
+  - MICS-HH/data/HH/alignment.yaml
+  - MICS-HH/data/HH/alignment_summary.csv
+  - MICS-HH/src
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-13T20:37:37'
+- goal: '比如：
+
+    washing_machine,64,Washing machine
+
+    household_has:_automatic_washing_machine,44,Household has: Automatic washing machine
+
+    household_have:_washing_machine/_dryer,4,Household have: Washing Machine/ Dryer
+
+    does_your_household_own:_washing_machine,3,Does your household own: Washing machine
+
+    washing_machine/_dryer,3,Washing machine/ Dryer
+
+    can_afford_washing_machine,2,Can afford washing machine
+
+
+    这一些问题都是关于是否有洗衣机的问题。当然还有其他的
+
+
+    但是，这不是同一类东西
+
+    dish_washing_machine,4,Dish washing machine
+
+    reason_household_does_not_have_a_washing_machine,2,Reason household does not have
+    a washing machine
+
+    reason_not_washing_machine,2,Reason not washing machine'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-13T20:46:34'
+- goal: "问题1： 在你列的\"应该合并\"的组里，can_afford_\n  washing_machine（能否负担得起洗衣机）是问拥有\n  能力，而washing_machine（是否有洗衣机）是问当\n\
+    \  前拥有——你认为这两个应该合并到同一组吗？\n\n应该不是一个问题\n\n  问题2：\n  household_has:_automatic_washing_machine\n\
+    \  特指全自动洗衣机，washing_machine/_dryer\n  指洗衣机/烘干机合体——你是希望只要含\"洗衣机\"这\n  个概念就合并，还是需要是同一类调查问题（例如\n\
+    \  都是\"是否拥有\"）才合并？\n是否拥有才合并，由于多个调研发生在不同的时间，所以有自动洗衣机，半自动，洗衣机，洗衣机干燥剂\n\n  问题3： reason_household_does_not_have_a_wash\n\
+    \  ing_machine 和\n  reason_not_washing_machine——这两个彼此之间应\n  该互相合并吗（都是\"没有洗衣机的原因\"\
+    ）？\n这两个应该合并\n\n  问题4： 你的最终目标是什么？\n  - (A)\n  让同义问题自动合并成一组，不需要人工审核\n  - (B)\n \
+    \ 产出一个候选合并列表，由人工最终决定是否合并\n我希望A，或者人的审核工作越少越好。\n\n注意，我不需要claude直接给我做。我需要代码，因为还有相似的任务要做。"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-13T20:50:54'
+- goal: '我觉得这两个方案都不太合理。
+
+    目前的主要的问题是varname无法对齐。
+
+    第一个方法，我不太理解有什么意义。
+
+    第二个方法，可能真的不合理。
+
+    你可以查询一下：
+
+    washing_machine,64,Washing machine
+
+    household_has:_automatic_washing_machine,44,Household has: Automatic washing machine
+
+
+    这二者其实是类似的问题，但是二者的embedding可能非常不一样。
+
+    如果放宽阈值可能会有大量的误合并。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-14T08:42:57'
+- goal: '目前，我在尝试对齐MICS的HH相关的调研数据。
+
+    现在的痛点是：
+
+    1. 问卷用的语言不通
+
+    2. 同样的column 名称对应的是不同的问题。
+
+    我们想统一这写问题的变量名称。
+
+    换句话说，同一columns下应该相同的问题。
+
+
+    你可以看这些代码。
+
+    我之前采用的实验策略是：
+
+    1. 第一把列名和问题标签从sav文件中抽取出来
+
+    2. 我们用llm gemini-2.5-flash-lite把不是英文的问题翻译成英文
+
+    3. 我们把英文问题embbeding掉，
+
+    4. 用embedding在同一问卷下去除重复，
+
+    5. 用embedding来匹配。
+
+
+    这个流程直观但是没有能实现目标：
+
+    因为同一个问题的问法不同，比如：
+
+    washing_machine,64,Washing machine
+
+    household_has:_automatic_washing_machine,44,Household has: Automatic washing machine
+
+    household_have:_washing_machine/_dryer,4,Household have: Washing Machine/ Dryer
+
+
+    我要怎么设计这个算法。我现在想的是，在翻译完成后，对变量进行拆墙或者补充。
+
+    也就是llm做大致的简化，保持他们的说法相似。
+
+    然后再做embedding，再匹配，你觉得呢。'
+  inputs:
+  - MICS-HH/src
+  - MICS-HH/data
+  - MICS-HH/docs
+  - MICS-HH/logs
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-14T09:09:48'
+- goal: '我有两个问题：
+
+    1，llm是否被调用，如果调用的话要在log中统计token
+
+    2. 是不是可以设计逐步扩大对齐。
+
+
+    我说下扩大对齐变量的思路，比如用embedding查询大量出现但是没有纳入规范化的变量，然后设计规范话的方案，你觉得怎么样。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-14T09:52:01'
