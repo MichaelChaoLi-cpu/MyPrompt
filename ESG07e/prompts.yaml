@@ -51,3 +51,144 @@ prompts:
 
     用中文问我'
   created_at: '2026-06-09T16:47:15'
+- goal: '我们现在做一个简单测试。
+
+    我想知道，农食相关的新闻数量会不会影响food企业以及相关的就业以及工资。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-14T14:16:19'
+- goal: "关于自变量（新闻）：\n  你说的\"农食相关新闻数量\"具体指哪个列？\n  - agrifood_count（原始篇数）\n  - agrifood_share（agrifood\
+    \ 新闻占该州总新闻的比例）\n  - 还是两者都要？\n\n分别测试呢\n\n  关于因变量（企业/就业/工资）：\n  - 就业用哪个？month1_emplvl\
+    \ / month2_emplvl / month3_emplvl 三列取平均，还是只用某一个？\n  - 工资用 avg_wkly_wage（平均周薪）还是\
+    \ total_qtrly_wages（季度总工资）？\n\nmonth1_emplvl / month2_emplvl / month3_emplvl 是不是应该三者的和\n\
+    total_qtrly_wages这个可以\n\n  关于\"测试\"的形式：\n  - 简单相关系数？\n  - OLS 回归（新闻 → 企业/就业/工资）？\n\
+    \  - 面板回归（控制州固定效应、时间固定效应）？\n\n  - OLS 回归（新闻 → 企业/就业/工资）？\n  - 面板回归（控制州固定效应、时间固定效应）？这两个都试试，还有two-way\n\
+    \n  关于时间结构：\n  新闻对企业的影响是同期的，还是你想测试新闻有没有滞后效应（比如上一季度的新闻影响这一季度的就业）？\n\n同期和滞后都是一下"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-14T14:18:58'
+- goal: "关于滞后：\n  滞后几期？只测 1 期（上一个季度），还是多期（比如 lag 1、lag 2）？\n\nlag 1\n\n  关于变量处理：\n\
+    \  就业和工资数值量级很大，要不要取 log（对数）再回归？这在劳动经济学里很常见，但如果你不想动变量就直接用原始值。\n\nlog化\n\n  关于结果输出：\n\
+    \  代码放在哪个目录？结果（回归表）输出成什么格式，CSV、Excel，还是直接打印到终端就行？\n\n格式跟R语言一致stargazer。可以存在data/exp，代码写在src/exp"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-14T14:20:37'
+- goal: '在src/preprocessing加一个script计算sentiment。
+
+    用model中那个joblib。
+
+    那是一个xgboost model输出是一个-1到1的数字。
+
+    这是一个sentiment值-1就是消极的1是积极的。
+
+    加一套数据在data/processed，输出可以为parquet为article_id和sentiment'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-14T14:48:10'
+- goal: 现在继续试验。我能不能把每个变量都用monthly first difference。不要用log。然后之后用z-score。然后再开始回归
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-14T19:34:33'
+- goal: '现在我们开始重新设计回归公式
+
+    Δ Agrifood share (z)
+
+    Δ State share (z)
+
+    Δ Mean sentiment (z)
+
+    Δ Mean agrifood sentiment (z)
+
+    Δ Mean rel×sentiment (z)'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-14T19:50:06'
+- goal: '这个分析可以作为主分析，
+
+    将该代码写入src/analyses。
+
+    接下来的代码都写在src/analyses
+
+    生成的图表在data/results
+
+    代码你可以参考../ESG07d/src/analyses
+
+    我们要解决的问题：
+
+    1. agrifood system热度是否增加
+
+    这应该是一个月度折线图，最后加一个年度表（最后一行为总数）
+
+    2.agrifood system文章是不是想某个话题集中
+
+    应该是一个月度的z-score
+
+    3.美国各州的总的州相关新闻的比例
+
+    美国州级地图
+
+    4.agrifood相关的新闻比例。
+
+    美国州级地图
+
+    5.各个州sentiment均值
+
+    美国州级地图
+
+    6.关键变量的data summary记录N，mean，mediam，std，min，max
+
+    表格
+
+    7.回归结果表格。src/exp/news_employment_monthly_fd.py 让名字合理化'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-14T20:29:36'
