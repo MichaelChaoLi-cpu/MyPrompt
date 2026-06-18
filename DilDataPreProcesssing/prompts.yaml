@@ -590,3 +590,115 @@ prompts:
 
     用中文问我'
   created_at: '2026-06-14T09:52:01'
+- goal: '1.现在对齐了多少变量？
+
+    2.是不是可以根据对齐的字典写代码，把sav逐渐合并成一个大的parquet，存在MICS-HH/data/HH/processed_data'
+  inputs:
+  - MICS-HH/data/HH
+  - MICS-HH/src
+  outputs:
+  - MICS-HH/src
+  - MICS-HH/data/HH
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-15T13:53:08'
+- goal: '1.现在对齐了多少变量？
+
+    2.是不是可以根据对齐的字典写代码，把sav逐渐合并成一个大的parquet，存在MICS-HH/data/HH/processed_data'
+  inputs:
+  - MICS-HH/data/HH
+  - MICS-HH/src
+  outputs:
+  - MICS-HH/src
+  - MICS-HH/data/HH
+  steps: []
+  notes: 我们这个项目alignment_summary_v2.csv有299行说明对齐了300来个变量对吗
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-15T14:14:45'
+- goal: '数据上传到localhost:5432
+
+    数据库叫mda
+
+    parquet叫final_MICS2MICS6
+
+    ind_que_MICSMICS
+
+    记录columns名称和原始问题。结构化记录内容。'
+  inputs:
+  - MICS-HH/src/merge_hh_to_parquet.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-15T16:20:39'
+- goal: '现在这样写两个REAMDE。一个英文，一个中文，二者互相连接。主页显示英文。
+
+    说明项目任务
+
+    第一章节：说明 MICS-HH的数据处理流程。
+
+    其他的之后添加'
+  inputs:
+  - MICS-HH
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-15T17:18:49'
+- goal: '依照MICS-HH的方法，设计算法来出来hl，代码按照README的步骤一步一步执行。
+
+    写一个script，执行后。再写在一个script'
+  inputs:
+  - MICS-HH/src
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-15T19:43:38'
+- goal: '依照MICS-HH和MICS-HL的方法，设计算法来出来ch，代码按照README的步骤一步一步执行。
+
+    写一个script，执行后。再写在一个script'
+  inputs:
+  - MICS-HH/src
+  - MICS-HL/src
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-16T08:06:37'
+- goal: 现在可以仿照前例来处理wm
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-16T14:29:16'
