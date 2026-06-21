@@ -702,3 +702,82 @@ prompts:
 
     用中文问我'
   created_at: '2026-06-16T14:29:16'
+- goal: '我想根据这个数据集进行一系列的关于妇女儿童健康的研究。
+
+    我已经把数据推上了数据库。
+
+    你能不能写一些query帮我做一个数据报告，为我选题提供依据。
+
+    代码可以写在src中。报告写在docs中。
+
+    我还有一个想法是不是可以通过dashbaord可视化数据呢。'
+  inputs:
+  - MICS-CH/src/upload_ch_to_postgres.py
+  - MICS-HH/src/upload_hh_to_postgres.py
+  - MICS-HL/src/upload_hl_to_postgres.py
+  - MICS-WM/src/upload_wm_to_postgres.py
+  outputs:
+  - docs
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-18T15:46:09'
+- goal: '我们先设计dashbaord
+
+    我想通过地图汇总数据，
+
+    用户通过dropdown menu选择数据集，varname，wave(defualt = all)
+
+    然后主屏幕上显示一个地图，是每个国家关于这个varname的均值。
+
+    在地图之下是信息汇总，total valid data数，占该数据集的比例，数据分布（histogram）'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-18T16:01:25'
+- goal: '我们先设计dashbaord
+
+    我想通过地图汇总数据，
+
+    用户通过dropdown menu选择数据集，varname，wave(defualt = all)
+
+    然后主屏幕上显示一个地图，是每个国家关于这个varname的均值。
+
+    在地图之下是信息汇总，total valid data数，占该数据集的比例，数据分布（histogram）
+
+    数据应该直接访问数据库，你觉得靠谱吗'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-18T16:01:46'
+- goal: '主屏幕需要两个card：
+
+    第一个card是汇总信息，选择数据集后，所有的变量都应该在这个汇总，varname，readable name，有效数，比例，变量性质
+
+    第二个card才是地图。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-18T16:49:42'
