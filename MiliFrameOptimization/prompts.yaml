@@ -43,3 +43,519 @@ prompts:
 
     有任何不懂都要问我'
   created_at: '2026-06-02T13:20:38'
+- goal: '接下来要改版整个repo，这个项目本身是研究性项目的模版。
+
+    之前，通过固定格式来进行管理。
+
+    这一版本，我们将重新skill话，全部流程，这样更有益于生成的灵活性，稳定性。
+
+    我们应先在docs中构建一个skill规划。逐步设定并归类我们需要的skill。
+
+    在我的计划中，skill应该包括两类：
+
+    项目管理型的skill：主要是为了管理目录结构，环境及代码控制，数据版本控制
+
+    研究推进型的skill：提供建议或者执行研究相关的任务'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-21T15:38:50'
+- goal: "我们只需要：\ninit-research-project\nmanage-project-structure\nsetup-environment\n\
+    manage-git-workflow\nmanage-data-versioning\ncheck-repo-health\n\n其中\ninit-research-project\n\
+    \    manage-project-structure\n    setup-environment\n    manage-git-workflow\
+    \ \n    manage-data-versioning\n应该直接触发这四个。\nmanage-git-workflow \nmanage-data-versioning\n\
+    可以单出使用"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: 'init-research-project
+
+    Initialize a new research project from the MiliFrame template.
+
+    manage-project-structure
+
+    Maintain expected directories such as src/, data/, docs/, export/, and etc/.
+
+    setup-environment
+
+    Configure Python environment, dependency files, and local environment variables.
+
+    manage-git-workflow
+
+    Support branch, commit, merge, and release workflow for research projects.
+
+    manage-data-versioning
+
+    Support DVC setup, data tracking, remote configuration, push, and pull.
+
+    manage-export-interface
+
+    Maintain the final artifact interface under export/.
+
+    check-repo-health
+
+    Inspect repository status, missing files, ignored files, dependency state, and
+    reproducibility risks.
+
+    update-project-docs
+
+    Keep durable project documentation aligned with current workflow decisions.'
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-21T16:05:41'
+- goal: "我们只需要：\ninit-research-project\nmanage-project-structure\nsetup-environment\n\
+    manage-git-workflow\nmanage-data-versioning\ncheck-repo-health\n\n其中\ninit-research-project\n\
+    \    manage-project-structure\n    setup-environment\n    manage-git-workflow\
+    \ \n    manage-data-versioning\n应该直接触发这四个。\nmanage-git-workflow \nmanage-data-versioning\n\
+    可以单出使用"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: 'init-research-project
+
+    Initialize a new research project from the MiliFrame template.
+
+    manage-project-structure
+
+    Maintain expected directories such as src/, data/, docs/, export/, and etc/.
+
+    setup-environment
+
+    Configure Python environment, dependency files, and local environment variables.
+
+    manage-git-workflow
+
+    Support branch, commit, merge, and release workflow for research projects.
+
+    manage-data-versioning
+
+    Support DVC setup, data tracking, remote configuration, push, and pull.
+
+    manage-export-interface
+
+    Maintain the final artifact interface under export/.
+
+    check-repo-health
+
+    Inspect repository status, missing files, ignored files, dependency state, and
+    reproducibility risks.
+
+    update-project-docs
+
+    Keep durable project documentation aligned with current workflow decisions.'
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-21T16:05:57'
+- goal: "现在开始构建manage-project-structure\n初始化时，我们的标准启动根目录下应该只有skills文档，.codex或者.claude\n\
+    他们从github中，直接获取\n然后执行manage-project-structure\n在新的文件中生成：\nsrc/preprocessing\n\
+    src/exp\nsrc/analyses\ndata/processed\ndata/raw\ndata/exp\ndata/results\ndocs/\n\
+    pyproject.toml\nREADME.md\n.gitignore\n.codex \n.claude\n如果这些文件夹不存在就新建，存在就保持\n\
+    默认git ignore 掉.codex和.claude\n不过应该询问用户两次\n\n补充一个规定谁是执行skill的人，谁是user"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-22T08:17:59'
+- goal: '还应该增加一个.env
+
+    初始化的时候还有一点，要初始化pyproject.toml的内容
+
+    name应该和文件夹同名
+
+    version 应该默认为 "0.0.1"
+
+    authors 询问user，
+
+    dependencies 暂时为空'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-22T09:30:06'
+- goal: 我将把现在的修改推到version/3.0.0 branch去，你帮我写一个guideline.md来教人把skill拉到一个叫militest的文件夹中，并开始测试。
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-22T14:43:33'
+- goal: 这个skill在建立文件夹结构是，加一个目录article和src等并列
+  inputs:
+  - .codex/skills/manage-project-structure
+  - .claude/skills/manage-project-structure
+  - docs/skills/manage-project-structure.md
+  outputs:
+  - .claude/skills/manage-project-structure
+  - .codex/skills/manage-project-structure
+  - docs/skills/manage-project-structure.md
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-22T14:57:46'
+- goal: "修改一下 \ngit remote add origin https://github.com/MichaelChaoLi-cpu/MiliFrame-Template.git\n\
+    git fetch --depth 1 origin version/3.0.0\ngit checkout FETCH_HEAD -- .codex/skills/manage-project-structure\
+    \ .claude/skills/manage-project-structure\n\n这个remote默认叫miliframe\n因为之后还要管理git的"
+  inputs:
+  - guideline.md
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-22T15:14:18'
+- goal: 'setup-environment开始设计这个skill
+
+    首先，应该在这个folder中安装自己的python环境，默认为3.12，不过要问用户要不要尝试安装其他版本。
+
+    我们采用的管理方式是uv + pyproject.toml
+
+    uv python install 3.12
+
+    之后，除非user有明确需求否则包管理就用uv，而且每次安装包都要注意更新pyproject.toml的dependency。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-22T15:24:29'
+- goal: 这是从零初始化，还有一种情况，就是其他人要浮现，他可能也会调用setup-envronment。这应该相当于直接uv sync对吗
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-22T15:27:25'
+- goal: 'manage-git-workflow
+
+    我们准备开始搞这个skill
+
+    他可以几种用法，可以询问用户：
+
+    初始化，确认origin是不是被设置，可以测试一下git remote -v
+
+    用户可以输入多个url 第一个叫origin，第二个secondary
+
+    提交，提交应该根据TEAM_RULES的要求，和要提交的内容，自动生成message，提交可以直接提交多条
+
+    分支，询问用户新建分支还是切换分支，如果新建则要求用户提供名称，如果切换就告诉用户现在有什么分支让用户选择
+
+    同步，推拉代码'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-22T16:34:18'
+- goal: 'manage-data-versioning
+
+    这个skill也包括几个功能：
+
+    初始化：
+
+    这一步要在当前的环境中安装dvc
+
+    dvc初始化，设置remote，应该是一个地址，可以是本地硬盘，可以是NAS+tailscale(一般也是通过tailscale mount)，可以是google
+    cloud storage；注意，如果是本地地址包括通过tailscale mount的地址，如果地址的最后一层不存在，则可以通过mkdir生成
+
+    然后要追踪
+
+    data/processed/
+
+    data/raw/
+
+    data/exp/
+
+    data/results/
+
+    article/
+
+    这五个文件夹分开track
+
+
+    如果dvc已经被初始化则提示用户。这完全有可能因为可能是用户复刻项目
+
+
+    提交：
+
+    检查被追踪的folder谁更新了就add谁
+
+    然后触发manage-git-workflow
+
+    将dvc的哈希作为data提交
+
+
+    上推
+
+    把更改dvc push掉
+
+
+    下拉
+
+    dvc pull'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-23T08:27:10'
+- goal: 'init-research-project
+
+    的主要作用是按顺序执行
+
+    - `manage-project-structure`
+
+    - `setup-environment`
+
+    - `manage-git-workflow`
+
+    - `manage-data-versioning`
+
+    属于是一见初始化的功能。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-23T14:29:48'
+- goal: "研究工作流：\n先帮我更细SKILL_PLAN.md\n\n1. 数据简报\n目的：是让用户对已有数据有个明确的认识，其次，帮助用户完成对变量进行筛选。\n\
+    输出应该包括分布图和数据汇总表\n如果包括时序数据应该询问用户用不用可视化时序变量。\n输入：data/raw data/processed src/exp\n\
+    输出：data/exp/数据简报\n\n2. 研究问题规划\n帮助用户制作可以用于研究的点，应该包括4-5点。\n结构为一个中心点，其他点应该是分点，来加深或者扩宽研究。\n\
+    输入为： data/exp\n输出为：docs/AnaSOP.md\n\n3. 可行性验证\n用当前数据来确认计划的问题能够被证真，证伪，或者总结出新的知识。\n\
+    这一步可能再其次要求出触发 研究问题规划\n输入：docx/AnaSOP.md data/raw data/processed \n输出： data/exp\n\
+    \n4. 数据预处理\n这一步需要处理数据，重新命名变量名。\n这里变量名应该被一一确定，而且应该与论文中使用的尽可能的一致\n这里变量的情况应该优先记录与docx/AnaSOP.md\n\
+    输入：data/raw data/processed docs/AnaSOP.md\n输出：docs/AnaSOP.md， data/processed src/preprocessing\n\
+    \n5. 图表计划\n这一步规划出有多少图和表。这一步可能会触发要求修改数据预处理。\n图，要说明表达的内容，形式，有几个子panel\n表，应该要说明表达的内容，有多少行列，行列的意义\n\
+    这些多明确记载AnaSOP中\n输入：data/raw data/processed docs/AnaSOP.md\n输出：docs/AnaSOP.md，\n\
+    \n6. 图表制作\n按照图表计划，一个一个的生成图表。\n每一个图表都由一个py script生成\n输入：data/raw data/processed\
+    \ docs/AnaSOP.md\n输出：data/results/figures data/results/tables src/analyses docs/AnaSOP.md\n\
+    \n7. 挑毛病\n这个skill就是看输入，然后挑毛病。\n一，图表能不能证明问题，分析是不是合理\n二，图表看起来是不是有问题\n这一步可能会导致重启动任何一步\n\
+    输入：data/results/figures data/results/tables src/analyses docs/AnaSOP.md\n输出：docs/issues.md\n\
+    \n8. 建立内容字典\n根据现在的docs/LAWS/law_actionbrief.yaml\n输入：data/results/figures data/results/tables\
+    \ src/analyses docs/AnaSOP.md\n输出：docs/actionbrief.yaml"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-23T16:56:54'
+- goal: '`data-briefing`
+
+    开始写这个skill，
+
+    有一个点，这里研究用的skill如果需要安装额外的包都要采用uv add'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-23T17:22:08'
+- goal: 'data-preprocessing
+
+    同时，制作codex和claude的skills。
+
+    对着个skill的具体流程的要求
+
+    首先，要让user确认变量的选择。
+
+    然后，把变量命名成可读名称，他可能是缩写，也可能是全名
+
+    之后，把数据集按照可读名称命名，通常就是更改列名
+
+    然后，更新AnaSOP的第二章记录可读名和全名'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-23T18:22:42'
+- goal: '1，变量应该保持和feasibility-check一致，不过要提供更多选择。
+
+    2， 一次性列出所有变量请用户勾选
+
+    3， 命名是 agent 基于变量原名建议，然后用户逐一确认/修改
+
+    4，正确，有时候可读名和全名是一样，
+
+    5，创建新文件，为了减少空间使用，数据集一般采用parquet格式
+
+    6，当然，不过这要跟用户协商
+
+    7，原始名 → 可读名 →全名， 源数据集、是否为最终分析变量'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-23T18:29:21'
+- goal: "1， \"提供更多选择\"具体指什么？是指把 feasibility-check 里标记为\n  weakly-testable 或 not-yet-testable\n\
+    \  的变量也列出来供用户选\n2，加后缀如_preprocessed、\n3，一个数据集对应一个脚本\n4，skill里边做\n5，## 2. Variable\
+    \ Dictionary markdown表格可以"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-23T18:31:48'
+- goal: '1. skill 里跟用户协商额外预处理，具体支持哪些操作？
+
+    你提供建议，用户选择。
+
+
+    2. pandas + pyarrow'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-23T18:33:37'
+- goal: '1， ## 3. Figure and Table Plan
+
+    2， 主动建议图表
+
+    3，要建议类型
+
+    4，Agent 只在输出里写一条警告/建议，最好是中文建议，因为我的语言是中文
+
+    5，只写 AnaSOP
+
+
+    补充一点，最好这个计划以表格形式写出。markdown表格，最后一列为状态，是否实施。用来连接下一个skill'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-23T18:49:59'
+- goal: '1，是逐个生成（先做 F1 → 用户确认 → 再做 F2）
+
+    2，直接运行
+
+    3，都可以
+
+    4，xlsx
+
+    5，png
+
+    6，没错'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-23T18:59:07'
+- goal: '1，动读取所有图表和 AnaSOP后直接给出批评意见
+
+    2，Agent能读取图片文件
+
+    3，每个问题一条，标注严重程度，这个应该也是一个表
+
+    4，只描述问题
+
+    5，在 issues.md 里写建议'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-23T19:20:24'
+- goal: "1, 这个文件是什么？是一个固定的模板/规范文件（随 MiliFrame\n  发布）\n2, docs/LAWS/law_actionbrief.yaml，你看一下\n\
+    3，是给后续写作工具用的\n4，law就是要求"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-23T19:32:28'
