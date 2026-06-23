@@ -559,3 +559,22 @@ prompts:
 
     用中文问我'
   created_at: '2026-06-23T19:32:28'
+- goal: '1，Agent根据对项目的理解自动生成
+
+    2，如果查不到，询问后由用户提供
+
+    3，可以从 parquet 文件读取，还有AnaSOP的第二章
+
+    4，需要校验，law_actionbrief.yaml可以直接融入skill
+
+    另外，这一步也要做验证，检查图表是不是全了，两个关键文件docs/AnaSOP.md和docs/actionbrief。yaml是不是完全'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-23T19:35:55'
