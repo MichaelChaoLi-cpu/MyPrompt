@@ -1,1 +1,72 @@
-prompts: []
+prompts:
+- goal: '现在我们在数据预处理部分，我想做一些关于女性健康的研究。
+
+    你看一下alignment_summary_v2
+
+    我想知道那些话题可以深化下去。
+
+    这个数据是MICS，是断面数据。
+
+    不过是全球数据，你觉得哪些变量，可以选择怎样做研究呢。
+
+    另外数据已经推到数据库了，MICS-WM/src/upload_wm_to_postgres.py
+
+    选定变量后可以帮我生成拉拉取代码。Research/MJ01 写一个说明md，加一个script，去拉取数据'
+  inputs:
+  - MICS-WM/src/upload_wm_to_postgres.py
+  outputs:
+  - Research/MJ01
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T09:32:36'
+- goal: '现在我们在数据预处理部分，我想做一些关于女性健康的研究。
+
+    你看一下alignment_summary_v2
+
+    我想知道那些话题可以深化下去。
+
+    这个数据是MICS，是断面数据。
+
+    不过是全球数据，你觉得哪些变量，可以选择怎样做研究呢。
+
+    另外数据已经推到数据库了，MICS-WM/src/upload_wm_to_postgres.py
+
+    选定变量后可以帮我生成拉拉取代码。Research/MJ01 写一个说明md，加一个script，去拉取数据
+
+    不过我们要先讨论一下'
+  inputs:
+  - MICS-WM/src/upload_wm_to_postgres.py
+  outputs:
+  - Research/MJ01
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T09:32:48'
+- goal: '在回答这些问题之前，我补充几个信息：
+
+    1.我主要研究发展的影响，解决不平等
+
+    2.我不是专业医学，属于发展经济学
+
+    3.最好包括发达和欠发达的对比，或者城乡对比
+
+    4.可选性也是未来的考虑，能不能和环境信息联合比如CMIP6'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T09:41:39'
