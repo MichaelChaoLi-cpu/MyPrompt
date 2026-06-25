@@ -727,3 +727,531 @@ prompts:
 
     用中文问我'
   created_at: '2026-06-08T08:51:27'
+- goal: '现在要调整新的新增show的位置等问题。
+
+    点击新增SHOW后，允许直接粘贴research文件夹的绝对地址，比如/Users/lichao/Research/ESG07e
+
+    然后原本生成论文中间文件的地方就自动连接到/Users/lichao/Research/ESG07e/article
+
+    export也就是绝对地址下的目录/Users/lichao/Research/ESG07e/export
+
+    SHOW本身不在保留在SHUANGYING/SHOWS。你觉得怎么样'
+  inputs:
+  - STAGE/app.py
+  - STAGE/templates
+  - STAGE/static
+  outputs:
+  - STAGE/app.py
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T11:13:24'
+- goal: 补充一点，应该在article/文件夹下建立一个show文件夹相当于原SHOWS/SHOW_XX的效果
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T11:25:58'
+- goal: "不对，\n/Users/lichao/Research/research_path ← research_path \narticle/\n然后article/show\
+    \ 这里就叫show不需要改了\n然后原本show下的文件夹\n      figures/\n      tables/\n      manuscript/\n\
+    \      code/\n      configs/\n      nbs/\n      metadata/\n他们应该让系统可以通过直接访问/Users/lichao/Research/research_path/export\n\
+    本质上也就是更改访问地址。"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T11:31:20'
+- goal: "[ClassicBuilder] YAML parse error in ESG07c-LC: mapping values are not allowed\
+    \ here\n  in \"<unicode string>\", line 2, column 68:\n     ... ergy Security\
+    \ in U.S. News Media: A Thematic and Geopolitical An ... \n                  \
+    \                       ^\n[ClassicBuilder] Processing ESG07d\n[ClassicBuilder]\
+    \ YAML parse error in ESG07d: mapping values are not allowed here\n  in \"<unicode\
+    \ string>\", line 1, column 43:\n     ... . News Coverage of Energy Prices: Geopolitical\
+    \ Events, Media Dis ... \n如果发现: -这类符号可以直接忽略掉"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T12:04:44'
+- goal: 能不能帮我简述一下这个角色的作用
+  inputs:
+  - AGENT/classic_selector.py
+  - DIALOGUE/ClassicSelector.md
+  - LAWS/law_classics_selector.yaml
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T13:26:15'
+- goal: 我有一个问题，这一步gemini看没看到图表，以及classics图表会不会被gemini看到。
+  inputs:
+  - AGENT/classic_selector.py
+  - DIALOGUE/ClassicSelector.md
+  - LAWS/law_classics_selector.yaml
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T13:43:43'
+- goal: 简述一下，这个部分的输入输出，以及执行流程。
+  inputs:
+  - LAWS/law_manuframe.yaml
+  - AGENT/manu_planner.py
+  - DIALOGUE/ManuPlanner.md
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T13:54:04'
+- goal: 'Planning的位置不对Figure not found: /Users/lichao/Research/ESG07e/article/show/figures/fig_agrifood_share_map.png
+
+    图应该是在Users/lichao/Research/ESG07e/export/figures'
+  inputs:
+  - LAWS/law_manuframe.yaml
+  - AGENT/manu_planner.py
+  - DIALOGUE/ManuPlanner.md
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T14:39:13'
+- goal: 'id
+
+    :
+
+    "fig_agrifood_share_map"
+
+    caption
+
+    :
+
+    "US state choropleth of mean agrifood news share, 2021–2025"
+
+    id，应该用想Figure 1这种的不是actionbrief中的，为了避免重复，这里可以叫content_media_id'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T15:08:39'
+- goal: 'id
+
+    :
+
+    "fig_agrifood_share_map"
+
+    caption
+
+    :
+
+    "US state choropleth of mean agrifood news share, 2021–2025"
+
+    id，应该用想Figure 1这种的不是actionbrief中的，为了避免重复，这里可以叫content_media_id
+
+    然后远citation review还是要的'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T15:09:01'
+- goal: '1.这部分的输入是什么，输出又是什么？
+
+    2.这一部分多媒体路径都对吗，图表，和必要文件？'
+  inputs:
+  - DIALOGUE/Writer.md
+  - AGENT/writer.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T15:49:18'
+- goal: '1.代码用处不大，因此不用输入
+
+    2.图表用处很大，因为应该读取图表，直接发给gemini。'
+  inputs:
+  - DIALOGUE/Writer.md
+  - AGENT/writer.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T16:02:12'
+- goal: 'excel转化markdown的时候保留三位小数。
+
+    如果是整数就保留整数形式。
+
+    这些可以固化在py代码中吗？
+
+    markdown表格确保生成时文章内容中也是使用三位小数。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T16:14:38'
+- goal: 'excel转化markdown的时候保留三位小数。
+
+    如果是整数就保留整数形式。
+
+    这些可以固化在py代码中吗？
+
+    markdown表格确保生成时文章内容中也是使用三位小数。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T16:14:51'
+- goal: 这两个代码是不是都要用AnaSOP.md
+  inputs:
+  - AGENT/manu_planner.py
+  - AGENT/writer.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T16:26:11'
+- goal: 这两个代码是不是都要输入AnaSOP.md
+  inputs:
+  - AGENT/manu_planner.py
+  - AGENT/writer.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T16:26:20'
+- goal: '接下来修改，我希望以段落为单位生成。新生成的段落要确保避免和已有段落存在一半以上的句子语意重复或看起来相似。
+
+    这要怎么修改，怎么设计呢。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T16:51:48'
+- goal: '接下来修改，我希望以段落为单位生成。新生成的段落要确保避免和已有的任何一个段落存在一半以上的句子语意重复或看起来相似。
+
+    这要怎么修改，怎么设计呢。'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T16:52:01'
+- goal: '强调一下，之后的unit以段落为单位，而不是subseciton和section了
+
+    1.  "已有的任何一个段落"是指 manu.md 里所有已写好的段落
+
+    2. 二者混合怎么样？
+
+    3.因为是按照段落生成的所以生成一段就可以了。
+
+    我追加一个问题，理论上来说重复段落的不被接受的原因是因为没有新的信息被提供，我们是不是可以根据段落所在文章位置追加prompt来强化再次生成的段落的实际作用'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T16:57:54'
+- goal: '强调一下，之后的unit以段落为单位，而不是subseciton和section了
+
+    1.  "已有的任何一个段落"是指 manu.md 里所有已写好的段落
+
+    2. 二者混合怎么样？
+
+    3.因为是按照段落生成的所以生成一段就可以了。
+
+    我追加一个问题，理论上来说重复段落的不被接受的原因是因为没有新的信息被提供，我们是不是可以根据段落所在文章位置追加prompt来强化再次生成的段落的实际作用'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T16:58:30'
+- goal: 这个部分干了什么
+  inputs:
+  - AGENT/evidence_scouter.py
+  - AGENT/evidence_editor.py
+  - DIALOGUE/EvidenceEditor.md
+  - DIALOGUE/EvidenceScouter.md
+  - LAWS/law_evidence_scout.yaml
+  outputs:
+  - AGENT/evidence_scouter.py
+  - AGENT/evidence_editor.py
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T20:16:25'
+- goal: 这个部分干了什么
+  inputs:
+  - AGENT/evidence_scouter.py
+  - AGENT/evidence_editor.py
+  - DIALOGUE/EvidenceEditor.md
+  - DIALOGUE/EvidenceScouter.md
+  - LAWS/law_evidence_scout.yaml
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T20:24:02'
+- goal: 这个部分干了什么，是什么功能，你觉得主要目的是什么
+  inputs:
+  - AGENT/evidence_scouter.py
+  - AGENT/evidence_editor.py
+  - DIALOGUE/EvidenceEditor.md
+  - DIALOGUE/EvidenceScouter.md
+  - LAWS/law_evidence_scout.yaml
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T20:24:26'
+- goal: 帮我看一下这个section是干嘛的，逻辑是啥
+  inputs:
+  - AGENT/manu_reviewer.py
+  - DIALOGUE/ManuReviewer.md
+  - LAWS/law_manu_reviewer.yaml
+  - STAGE/app.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T20:46:41'
+- goal: 这个canon_selector正确吗
+  inputs:
+  - STAGE/app.py
+  - AGENT/canon_selector.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T21:42:30'
+- goal: 你看看这个section怎么样，有什么问题吗
+  inputs:
+  - AGENT/citation_scouter.py
+  - AGENT/citation_editor_step2.py
+  - AGENT/citation_editor_step1.py
+  - DIALOGUE/CitationEditorFirstDialogue.md
+  - DIALOGUE/CitationScouter.md
+  - LAWS/law_citation_scout.yaml
+  - LAWS/law_citation_information.yaml
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T21:46:45'
+- goal: '1,处理掉
+
+    2，处理掉
+
+    3，topk = random.choices([1, 2, 3, 4], weights=[0.1, 0.4, 0.4, 0.1])[0]这个就是最正确的，其他的配合这个
+
+    4，根据3改
+
+    5，去掉
+
+    6，你帮我确认一下那个才是正确的prompt
+
+    7，去重'
+  inputs:
+  - DIALOGUE/CitationEditorFirstDialogue.md
+  - DIALOGUE/CitationScouter.md
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T21:54:01'
+- goal: 帮我检查Improver section的代码，看看有没有bug和漏洞
+  inputs:
+  - STAGE/app.py
+  - AGENT/sentence_improver.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T22:17:24'
+- goal: 看看decorator有没有问题
+  inputs:
+  - AGENT/decorator.py
+  - STAGE/app.py
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T22:31:57'
+- goal: '扫描确认final_reporter看看有啥问题吗。
+
+    确保final section没有问题'
+  inputs:
+  - AGENT/final_reporter.py
+  - STAGE
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T22:41:37'
+- goal: '检查每个Section看看哪些文档是多余的。
+
+    修正完了，更新README
+
+    更新Architecture 以及CastList'
+  inputs:
+  - STAGE
+  - AGENT
+  - DIALOGUE
+  - LAWS
+  - README.md
+  - CONSTITUTION/Architecture.md
+  - CONSTITUTION/CastList.md
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T22:48:44'
+- goal: '检查每个Section看看哪些文档是多余的。
+
+    确认各个section的py有没有问题
+
+    看DIALOGUE和LAWS是不是有多余的'
+  inputs:
+  - STAGE
+  - AGENT
+  - DIALOGUE
+  - LAWS
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-24T23:04:45'
