@@ -1,0 +1,72 @@
+prompts:
+- goal: "我们准备做一个dashboard来展示数据：\nLanding page: \nDropdown menu: Sector (default: Energy)\
+    \ \nDropdown menu: ESG Topic (default: GHG)\nTime Range bar: select begin month\
+    \ (YYYY-MM) and the end month (YYYY-MM)\n\nMain part of the page should be a world\
+    \ map, national level, colored by Social Risk Score (Blue (safe) to Red (dangerous))\
+    \ \n\n你可以仿照../DilDataPreProcessing\n端口可以用7777\n按照包用uv add环境是3.12 安装到。venv\n数据在/Volumes/news_backup/monthly_summary\n\
+    level0 是国家级的\nlevel1 是亚国家的。\n我想先展示国家的数据，然后双击进入某个国家，展示亚国家的数据"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-25T10:54:31'
+- goal: "我们准备做一个dashboard来展示数据：\nLanding page: \nDropdown menu: Sector (default: Energy)\
+    \ \nDropdown menu: ESG Topic (default: GHG)\nTime Range bar: select begin month\
+    \ (YYYY-MM) and the end month (YYYY-MM)\n\nMain part of the page should be a world\
+    \ map, national level, colored by Social Risk Score (Blue (safe) to Red (dangerous))\
+    \ \n\n你可以仿照../DilDataPreProcessing\n端口可以用7777\n按照包用uv add环境是3.12 安装到。venv\n数据在/Volumes/news_backup/monthly_summary\n\
+    level0 是国家级的\nlevel1 是亚国家的。\n我想先展示国家的数据，然后双击进入某个国家，展示亚国家的数据"
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-25T10:54:52'
+- goal: '显示地图的时候是不是可以用WGS坐标系，这样地图就是长方形了。
+
+    另外Risk Score应该*100，这样显示避免小数开始0过多'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-25T12:51:10'
+- goal: '增加两个显示模式
+
+    默认应该显示z-score，在确认时间range后，对各国均值进行标准化。
+
+    另外在增加一个显示模式，就是现实这个国家的排序'
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-25T12:58:26'
+- goal: 我觉得应该对数据进行一次预处理，去掉two-way effects
+  inputs: []
+  outputs: []
+  steps: []
+  notes: ''
+  sticky_notes: '不要猜测我的意图。
+
+    有任何不懂都要问我。
+
+    用中文问我'
+  created_at: '2026-06-25T13:13:55'
